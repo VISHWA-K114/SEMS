@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-slate-200;
+    box-sizing: border-box;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+    min-height: 100vh;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-primary-600 hover:bg-primary-700 active:bg-primary-800 text-white font-medium text-sm transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm border border-primary-700/10;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-white border border-slate-200 text-slate-600 font-medium text-sm hover:bg-slate-50 hover:border-slate-300 hover:text-slate-900 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-white border border-red-200 text-red-600 font-medium text-sm hover:bg-red-50 hover:border-red-300 hover:text-red-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md text-slate-500 font-medium text-sm hover:bg-slate-100 hover:text-slate-900 transition-all duration-200;
+  }
+
+  /* Form inputs */
+  .input {
+    @apply w-full px-3 py-2 rounded-md bg-white border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all duration-200 text-sm shadow-sm;
+  }
+
+  .label {
+    @apply block text-[13px] font-semibold text-slate-600 mb-1.5;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white border border-slate-200 rounded-lg p-6 shadow-subtle;
+  }
+
+  .card-sm {
+    @apply bg-white border border-slate-200 rounded-lg p-4 shadow-sm;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold;
+  }
+
+  .badge-green {
+    @apply badge bg-emerald-50 text-emerald-700 border border-emerald-200/50;
+  }
+
+  .badge-red {
+    @apply badge bg-red-50 text-red-700 border border-red-200/50;
+  }
+
+  .badge-yellow {
+    @apply badge bg-amber-50 text-amber-700 border border-amber-200/50;
+  }
+
+  .badge-blue {
+    @apply badge bg-primary-50 text-primary-700 border border-primary-200/50;
+  }
+
+  .badge-purple {
+    @apply badge bg-slate-100 text-slate-700 border border-slate-200/50;
+  }
+
+  /* Error text */
+  .error-text {
+    @apply text-red-600 text-[12px] mt-1.5 font-medium;
+  }
+
+  /* Page heading */
+  .page-title {
+    @apply text-xl font-bold text-slate-900 tracking-tight;
+  }
+
+  .page-subtitle {
+    @apply text-[13px] text-slate-500 mt-0.5;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #ddd7cc transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #ddd7cc;
+    border-radius: 3px;
+  }
+}
